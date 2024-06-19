@@ -26,7 +26,7 @@ import java.util.Properties;
 public class AppConfig {
 
 
-    private Environment env;
+    private final Environment env;
 
     public AppConfig(Environment env) {
         this.env = env;
