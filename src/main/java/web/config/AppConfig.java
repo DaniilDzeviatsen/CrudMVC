@@ -73,5 +73,4 @@ public class AppConfig {
                 "org.hibernate.dialect.MySQL5Dialect");
         return properties;
     }
-
 }

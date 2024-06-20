@@ -30,7 +30,6 @@ public class UserController {
         return "show";
     }
 
-
     @GetMapping("/new")
     public String showSignUpForm(@ModelAttribute("user") User user) {
         return "new";
@@ -42,13 +41,11 @@ public class UserController {
         return "redirect:users";
     }
 
-
     @GetMapping("/edit")
     public String showUpdateForm(@RequestParam Long id, Model model) {
         model.addAttribute("user", userService.getUser(id));
         return "edit";
     }
-
 
     @PatchMapping("/")
     public String updateUser(@ModelAttribute("user") User user) {
@@ -61,5 +58,4 @@ public class UserController {
         userService.deleteUser(id);
         return "redirect:/users";
     }
-
 }
